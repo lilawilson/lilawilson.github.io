@@ -1,5 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: lilawilson/lilawilson.github.io
+  branch: master
+  site_domain: nissenutmeg.netlify.com
 media_folder: "/images"
 public_folder: "/images"
 collections:
