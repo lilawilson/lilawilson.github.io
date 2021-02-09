@@ -17,6 +17,9 @@
           <a class="{{ current }}" href="{{ item.url }}">{{ item.text }}</a>
         </li>
         {% endfor %}
+        <li class="menu-item">
+          <div data-netlify-identity-menu></div>
+        </li>
       </ul><!-- .menu -->
       <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
           class="icon-close" aria-hidden="true"></span></button>
