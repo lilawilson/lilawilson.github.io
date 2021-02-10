@@ -37,7 +37,7 @@ collections:
       - {label: "Link", name: "permalink", widget: "string"}
       - {label: "Image", name: "feature_image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+  - name: "recipes" # Used in routes, e.g., /admin/collections/blog
     label_singular: 'Recipe'
     description: >
       Recipes
