@@ -36,3 +36,4 @@ baseurl: ""
 collections:
   recipes:
     output: true
+    permalink: /:collection/:name
