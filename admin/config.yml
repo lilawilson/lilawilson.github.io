@@ -23,6 +23,35 @@ collections:
       - {label: "Image", name: "feature_image", widget: "image"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label_singular: 'Page'
+    description: >
+      Pages (not posts)
+    label: "Pages" # Used in the UI
+    folder: "/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "permalink", widget: "string"}
+      - {label: "Image", name: "feature_image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label_singular: 'Recipe'
+    description: >
+      Recipes
+    label: "Recipies" # Used in the UI
+    folder: "/_recipes/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "permalink", widget: "string"}
+      - {label: "Image", name: "feature_image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - label: "Settings"
     name: "settings"
     files:
