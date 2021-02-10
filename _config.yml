@@ -9,11 +9,28 @@ sass:
   sass_dir: _sass
   style: compressed
 lang: en-US
+title: Nisse & Nutmeg
+description: Recipes, Recommendations, Norway, Nisse, Nutmeg & Pepper
+asciicomment: |-2
+         _                        
+         \`*-.                    
+          )  _`-.   meow!           
+         .  : `. .  /             
+         : _   '  \               
+         ; *` _.   `*-._          
+         `-.-'          `-.       
+           ;       `       `.     
+           :.       .        \    
+           . \  .   :   .-'   .   
+           '  `+.;  ;  '      :   
+           :  '  |    ;       ;-. 
+           ; '   : :`-:     _.`* ;
+        .*' /  .*' ; .*`- +'  `*' 
+        `*-*   `*-*  `*-*' 
 accent_color: "#800000"
 markdown: kramdown
 url: https://nisseandnutmeg.netlify.app
 favicon: images/favicon.png
-description: Recipes, Recommendations, Norway, Nisse, Nutmeg & Pepper
 navigation:
   - text: Home
     url: /
@@ -27,13 +44,12 @@ navigation:
     url: /recipes/
   - text: Tags
     url: /tags/
-paginate: 3
-title: Nisse & Nutmeg
-footer:
-  content: "&copy; Lila Wilson 2021"
-  has_social: true
-baseurl: ""
 collections:
   recipes:
     output: true
     permalink: /:collection/:name
+paginate: 3
+footer:
+  content: "&copy; Lila Wilson 2021"
+  has_social: true
+baseurl: ""
