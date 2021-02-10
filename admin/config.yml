@@ -30,11 +30,6 @@ collections:
         name: "general"
         file: "/_config.yml"
         fields:
-          - {label: Language, name: lang, widget: hidden, default: en-US}
-          - {label: Base Url, name: baseurl, widget: hidden, default: ""}
-          - {label: disqus, name: disqus, widget: hidden, default: ""}
-          
-          - {label: Url, name: url, widget: hidden, default: "https://lilawilson.github.io"}
           - {label: Site Logo, name: favicon, widget: image}
           - {label: Site Title, name: title, widget: string}
           - {label: Site description, name: description, widget: text}
@@ -44,11 +39,34 @@ collections:
             widget: "object"
             collapsed: false
             fields: 
-              - {label: "Footer Content", name: "cntent", widget: "string"}
-              - {label: "Show Social Iocns", name: "has_social", widget: "boolean"}
+              - {label: "Footer Content", name: "content", widget: "string"}
+              - {label: "Show Social Icons", name: "has_social", widget: "boolean"}
           - label: "Navigation"
             name: "navigation"
             widget: "list"
             fields:
               - {label: Title, name: text, widget: string}
               - {label: URL, name: url, widget: string}
+      - label: "Author Settings"
+        name: "author"
+        file: "/_data/author.json"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: URL, name: url, widget: string}
+          - {label: Location, name: location, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Bio, name: bio, widget: text}
+      - label: "Author Settings"
+        name: "author"
+        file: "/_data/social.json"
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "object"
+            collapsed: false
+            fields: 
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Icon (fontawesome)", name: "icon", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+         
