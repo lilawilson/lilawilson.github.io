@@ -74,6 +74,7 @@ collections:
           - {label: Site Title, name: title, widget: string}
           - {label: Site description, name: description, widget: text}
           - {label: Accent Color, name: accent-color, widget: color}
+          - {label: Secret Comment in Code, name: asciicomment, widget: text}
           - label: "Footer"
             name: "footer"
             widget: "object"
