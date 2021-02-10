@@ -1,4 +1,4 @@
-accent-color: "#800000"
+accent-color: "#8a0404"
 google_analytics: ""
 plugins:
   - jekyll-paginate
@@ -21,12 +21,12 @@ navigation:
     url: /tags#norway
   - text: Goats
     url: /tags#goats
+  - text: Books
+    url: /tags#books
   - text: Recipes
     url: /recipes/
   - text: Tags
     url: /tags/
-  - text: Books
-    url: /tags#books
 paginate: 3
 title: Nisse & Nutmeg
 footer:
