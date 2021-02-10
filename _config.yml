@@ -33,3 +33,6 @@ footer:
   content: "&copy; Lila Wilson 2021"
   has_social: true
 baseurl: ""
+collections:
+  recipes:
+    output: true
