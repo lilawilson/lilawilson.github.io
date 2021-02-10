@@ -9,6 +9,8 @@ public_folder: "/images"
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label_singular: 'Post'
+    editor:
+      preview: false
     description: >
       Posts go here.
     label: "Posts" # Used in the UI
@@ -25,6 +27,8 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label_singular: 'Page'
+    editor:
+      preview: false
     description: >
       Pages (not posts)
     label: "Pages" # Used in the UI
@@ -39,21 +43,28 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "recipes" # Used in routes, e.g., /admin/collections/blog
     label_singular: 'Recipe'
+    editor:
+      preview: false
     description: >
       Recipes
-    label: "Recipies" # Used in the UI
+    label: "Recipes" # Used in the UI
     folder: "/_recipes/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "permalink", widget: "string"}
-      - {label: "Image", name: "feature_image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+     - label: "Layout"
+       name: "layout"
+       widget: "select"
+       default: "page"
+       options: ["page", "post", "tags", "none", "default"]
+     - {label: "Title", name: "title", widget: "string"}
+     - {label: "Image", name: "feature_image", widget: "image"}
+     - {label: "Body", name: "body", widget: "markdown"}
 
   - label: "Settings"
     name: "settings"
+    editor:
+      preview: false
     files:
       - label: "General Settings"
         name: "general"
