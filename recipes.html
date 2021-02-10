@@ -1,0 +1,52 @@
+---
+layout: default
+permalink: /recipes/
+---
+
+<main class="main-content fadeInDown delay_075s">
+
+  {% for recipe in paginator.recipes %}
+  <article class="recipe">
+    <header class="recipe-header">
+      <time class="recipe-date" datetime="{{ recipe.date | date: "%Y-%m-%d" }}">{{recipe.date | date: "%B %-d, %Y" }}</time>
+      <h2 class="recipe-title"><a href="{{ site.baseurl }}{{ recipe.url }}" rel="bookmark">{{recipe.title}}</a></h2>
+      <div class="recipe-meta">
+        By <span class="recipe-author">{{ site.data.author.name }}</span>{% if recipe.tags.size > 0 %}<span
+          class="recipe-tags"> in
+          {% for tag in recipe.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
+      </div><!-- .recipe-meta -->
+      {% if recipe.feature_image and recipe.feature_image != "" %}
+      <figure class="recipe-thumbnail image-card width-wide">
+        <a href="{{site.baseurl}}{{recipe.url}}"><img src="{{ recipe.feature_image | relative_url }}"
+            alt="{{ recipe.title }}"></a>
+      </figure><!-- .recipe-thumbnail -->
+      {% endif %}
+    </header><!-- .recipe-header -->
+    <div class="recipe-content">
+      {% if recipe.content contains '<!--more-->' %}
+      {{ recipe.content | split:'<!--more-->' | first }}
+      <p class="read-more"><a href="{{ site.baseurl }}{{ recipe.url }}" class="read-more-link">Continue reading &rarr;</a>
+      </p>
+      {% else %}
+      {{ recipe.content }}
+      {% endif %}
+    </div><!-- .recipe-content -->
+  </article><!-- .recipe -->
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    <h2 class="screen-reader-text">recipes navigation</h2>
+    <div class="nav-links">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="newer-recipes">&larr; Newer recipes</a>
+      {% endif %}
+      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="older-recipes">Older recipes &rarr;</a>
+      {% endif %}
+    </div>
+  </nav><!-- .pagination -->
+  {% endif %}
+
+</main><!-- .site-main -->
