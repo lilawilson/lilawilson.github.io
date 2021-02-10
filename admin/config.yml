@@ -26,12 +26,23 @@ collections:
   - label: "Settings"
     name: "settings"
     files:
-      - label: "About Page"
-        name: "about"
+      - label: "General Settings"
+        name: "general"
         file: "/_config.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: Language, name: lang, widget: hidden, default: en-US}
+          - {label: Base Url, name: baseurl, widget: hidden, default: ""}
+          - {label: Url, name: url, widget: hidden, default: "https://lilawilson.github.io"}
+          - {label: Site Logo, name: favicon, widget: image}
+          - {label: Site Title, name: title, widget: string}
+          - {label: Site description, name: description, widget: text}
+          - label: "Nevigation"
+            name: "navigation"
+            widget: "list"
+            fields:
+              - {label: Title, name: text, widget: string
+              - {label: URL, name: url, widget: url}
+
       - label: "Locations Page"
         name: "locations"
         file: "site/content/locations.yml"
