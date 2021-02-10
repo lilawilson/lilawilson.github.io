@@ -48,10 +48,8 @@ h5,
 h6 {
   color: _palette(secondary);
   font-family: _font(secondary);
-  font-weight: bold;
   line-height: 1.2;
   margin: 2rem 0 1rem;
-  text-rendering: optimizeLegibility;
   &:first-child {
     margin-top: 0;
   }
