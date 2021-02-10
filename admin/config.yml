@@ -56,8 +56,8 @@ collections:
           - {label: Location, name: location, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Bio, name: bio, widget: text}
-      - label: "Author Settings"
-        name: "author"
+      - label: "Social Icon Settings"
+        name: "social"
         file: "/_data/social.json"
         fields:
           - label: "Links"
