@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
 
+site_url: https://nisseandnutmeg.netlify.app
+display_url: https://nisseandnutmeg.netlify.app
+logo_url: https://nisseandnutmeg.netlify.app/images/favicon.png
 media_folder: "/images"
 public_folder: "/images"
 collections:
@@ -20,3 +23,24 @@ collections:
       - {label: "Image", name: "feature_image", widget: "image"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "/_config.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
