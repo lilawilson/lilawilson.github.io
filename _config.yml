@@ -11,21 +11,25 @@ sass:
 lang: en-US
 accent_color: "#800000"
 markdown: kramdown
-baseurl: ""
 url: https://lilawilson.github.io
 favicon: images/favicon.png
-description: The description of the Nisse and Nutmeg site...
+description: Recipes, Recommendations, Norway, Nisse, Nutmeg & Pepper
 navigation:
   - text: Home
     url: /
-  - text: About
-    url: /about/
+  - text: Norway
+    url: /tags#norway
+  - text: Goats
+    url: /tags#goats
   - text: Recipes
     url: /recipes/
   - text: Tags
     url: /tags/
+  - text: Books
+    url: /tags#books
 paginate: 3
 title: Nisse & Nutmeg
 footer:
   content: "&copy; Lila Wilson 2021"
   has_social: true
+baseurl: ""
