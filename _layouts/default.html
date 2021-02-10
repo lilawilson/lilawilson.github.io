@@ -32,6 +32,16 @@
   {% endif %}
   <script src="{{ '/assets/js/plugins.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
-
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+  </script>
 </body>
 </html>
