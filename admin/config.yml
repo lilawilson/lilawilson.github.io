@@ -103,7 +103,7 @@ collections:
         fields:
           - label: "Links"
             name: "links"
-            widget: "object"
+            widget: "list"
             collapsed: false
             fields: 
               - {label: "Title", name: "title", widget: "string"}
