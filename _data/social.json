@@ -4,6 +4,11 @@
       "title": "GitHub",
       "icon": "fa-github",
       "url": "https://github.com/lilawilson/lilawilson.github.io/"
+    },
+    {
+      "title": "Twitter",
+      "icon": "fa-dumpster",
+      "url": "#"
     }
   ]
 }
