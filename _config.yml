@@ -53,3 +53,4 @@ footer:
   content: "&copy; Lila Wilson 2021"
   has_social: true
 baseurl: ""
+timezone: America/Los_Angeles
