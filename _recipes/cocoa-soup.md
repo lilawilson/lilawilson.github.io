@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cocoa Soup
+title: Cocoa Soup (Adapted from recipe on food.com)
 feature_image: https://www.spiritedpuddlejumper.com/wp-content/uploads/2015/12/024.jpg
 ---
 The days are colder now that it's February, and we all need warming up. This delicious, thickened version of hot chocolate should do the trick! It's a  simple recipe, so you can make extra and warm it up if you want it later!
